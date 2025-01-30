@@ -1,1 +1,215 @@
-Coming soon
+Collecting workspace information
+
+# Library App
+
+## Description
+Library App is a console application for managing a library system. It allows users to search for patrons, view patron details, manage book loans, and renew memberships. The application uses JSON files for data storage and follows a clean architecture with dependency injection.
+
+## Project Structure
+```
+AccelerateDevGitHubCopilot.sln
+README.md
+src/
+  Library.ApplicationCore/
+    Entities/
+      Author.cs
+      Book.cs
+      BookItem.cs
+      Loan.cs
+      Patron.cs
+    Enums/
+      EnumHelper.cs
+      LoanExtensionStatus.cs
+      LoanReturnStatus.cs
+      MembershipRenewalStatus.cs
+    Interfaces/
+      ILoanRepository.cs
+      ILoanService.cs
+      IPatronRepository.cs
+      IPatronService.cs
+    Library.ApplicationCore.csproj
+    Services/
+      LoanService.cs
+      PatronService.cs
+  Library.Console/
+    appSettings.json
+    CommonActions.cs
+    ConsoleApp.cs
+    ConsoleState.cs
+    Json/
+      Authors.json
+      Books.json
+      BookItems.json
+      Loans.json
+      Patrons.json
+    Library.Console.csproj
+    Program.cs
+  Library.Infrastructure/
+    Data/
+      JsonData.cs
+      JsonLoanRepository.cs
+      JsonPatronRepository.cs
+    Library.Infrastructure.csproj
+tests/
+  UnitTests/
+    ApplicationCore/
+      LoanService/
+        ExtendLoan.cs
+        ReturnLoan.cs
+      PatronService/
+        RenewMembership.cs
+    LoanFactory.cs
+    PatronFactory.cs
+    UnitTests.csproj
+```
+
+## Key Classes and Interfaces
+- **Entities**:
+  - 
+
+Author
+
+: Represents an author.
+  - 
+
+Book
+
+: Represents a book.
+  - 
+
+BookItem
+
+: Represents a specific copy of a book.
+  - 
+
+Loan
+
+: Represents a book loan.
+  - 
+
+Patron
+
+: Represents a library patron.
+
+- **Enums**:
+  - 
+
+EnumHelper
+
+: Provides helper methods for enums.
+  - 
+
+LoanExtensionStatus
+
+: Enum for loan extension statuses.
+  - 
+
+LoanReturnStatus
+
+: Enum for loan return statuses.
+  - 
+
+MembershipRenewalStatus
+
+: Enum for membership renewal statuses.
+
+- **Interfaces**:
+  - 
+
+ILoanRepository
+
+: Interface for loan repository.
+  - 
+
+ILoanService
+
+: Interface for loan service.
+  - 
+
+IPatronRepository
+
+: Interface for patron repository.
+  - 
+
+IPatronService
+
+: Interface for patron service.
+
+- **Services**:
+  - 
+
+LoanService
+
+: Implements 
+
+ILoanService
+
+ for managing loans.
+  - 
+
+PatronService
+
+: Implements 
+
+IPatronService
+
+ for managing patrons.
+
+- **Console**:
+  - 
+
+ConsoleApp
+
+: Main class for the console application.
+  - 
+
+CommonActions
+
+: Enum for common actions in the console app.
+  - 
+
+ConsoleState
+
+: Enum for console states.
+
+- **Infrastructure**:
+  - 
+
+JsonData
+
+: Manages JSON data loading and saving.
+  - 
+
+JsonLoanRepository
+
+: Implements 
+
+ILoanRepository
+
+ for JSON data.
+  - 
+
+JsonPatronRepository
+
+: Implements 
+
+IPatronRepository
+
+ for JSON data.
+
+## Usage
+1. Clone the repository.
+2. Open the solution file 
+
+AccelerateDevGitHubCopilot.sln
+
+ in Visual Studio.
+3. Build the solution.
+4. Run the 
+
+Library.Console
+
+ project.
+
+## License
+This project is licensed under the MIT License.
